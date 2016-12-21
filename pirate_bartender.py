@@ -19,6 +19,7 @@ ingredients = {
 cocktails = ['The Old Man and the Sea', 'Treasure Island', 'Moby-Dick', 'Twenty Thousand Leagues under the Sea', 'The Odyssey']
 
 answers = {}
+name = input ("What is your name?")
 
 for question in questions:
         taste = input (questions[question])
@@ -37,11 +38,9 @@ print(answers)
 # All the random choices (preferences) for ingredeients are stored in some list 
 
 
-drink = "Pirate bartender will mix the cocktail "
+drink = "Pirate bartender will mix for you the cocktail "
 drink_list = [] 
 for answer in answers: 
     if answers[answer] == True:
-        # print (random.choice(ingredients[answer]))
         drink_list.append(random.choice(ingredients[answer]))
-        # print ("We should use the following ingredients: {}".format(drink))
-print (drink + random.choice(cocktails) + " with " + ", ".join(drink_list) +".")
+print (name + ", " + drink + random.choice(cocktails) + " with " + ", ".join(drink_list) +".")
